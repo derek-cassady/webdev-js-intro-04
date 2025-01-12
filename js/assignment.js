@@ -12,7 +12,13 @@ let age;
 function checkAgeAndRespond() {
     age = parseInt(ageInputEl.value);
     
-    // Write your code below
+    if (age >= 21) {
+        responseEl.textContent = "You can vote and purchase alcohol.";
+    } else if (age >= 18) {
+        responseEl.textContent = "You can vote, but you cannot purchase alcohol.";
+    } else {
+        responseEl.textContent = "You cannot vote and you cannot purchase alcohol.";
+    }
 
 }
 
